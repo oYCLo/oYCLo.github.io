@@ -1,0 +1,5 @@
+# Local working notes and tooling — not part of the published site
+plan/
+temp/
+.claude/
+.DS_Store

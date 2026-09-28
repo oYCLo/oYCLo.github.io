@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chenglei Yu (余成磊) · Westlake University</title>
+  <meta name="description" content="Chenglei Yu (余成磊) is a Ph.D. student at Westlake University and Zhejiang University, working on generative models (flow matching, optimal transport, stochastic bridges) for single-cell biology.">
+  <meta name="author" content="Chenglei Yu">
+  <link rel="canonical" href="https://oyclo.github.io/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#faf8f4">
+  <script>
+    // Choose the theme before first paint: the visitor's saved choice, else the system setting.
+    (() => {
+      let theme = null;
+      try { theme = localStorage.getItem("theme"); } catch (e) { /* storage blocked */ }
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+      if (theme === "dark") document.querySelector('meta[name="theme-color"]').content = "#131312";
+    })();
+  </script>
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Chenglei Yu (余成磊)">
+  <meta property="og:description" content="Ph.D. student at Westlake University &amp; Zhejiang University. Generative models for single-cell biology.">
+  <meta property="og:url" content="https://oyclo.github.io/">
+  <meta property="og:image" content="https://oyclo.github.io/assets/img/profile-square.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Web fonts load without blocking the first paint; if they are unreachable the local fallbacks in style.css are used. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&amp;family=Source+Sans+3:wght@400..700&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&amp;family=Source+Sans+3:wght@400..700&amp;display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chenglei Yu",
+    "alternateName": "余成磊",
+    "url": "https://oyclo.github.io/",
+    "image": "https://oyclo.github.io/assets/img/profile-square.jpg",
+    "email": "mailto:yuchenglei@westlake.edu.cn",
+    "jobTitle": "Ph.D. Student",
+    "affiliation": [
+      { "@type": "CollegeOrUniversity", "name": "Westlake University" },
+      { "@type": "CollegeOrUniversity", "name": "Zhejiang University" }
+    ],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=lzYSFx4AAAAJ",
+      "https://github.com/oYCLo"
+    ]
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">Chenglei Yu</a>
+      <div class="topbar-right">
+        <nav aria-label="Sections">
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 14.6A8.4 8.4 0 0 1 9.4 3.6a8.4 8.4 0 1 0 11 11Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+
+    <!-- ============================== About ============================== -->
+    <section class="hero" id="about" aria-label="About">
+      <img class="portrait" src="assets/img/profile.jpg" width="480" height="600" alt="Portrait of Chenglei Yu on a snowy mountain">
+      <div class="intro">
+        <h1>Chenglei Yu <span class="name-zh" lang="zh-CN">余成磊</span></h1>
+        <p class="tagline">Ph.D. student at Westlake University &amp; Zhejiang University</p>
+        <p>
+          I am a Ph.D. student (since 2024) in the joint program of
+          <a href="https://en.westlake.edu.cn/">Westlake University</a> and
+          <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>, advised by
+          <a href="https://tailin.org/">Prof. Tailin Wu</a> in the
+          <a href="https://ai4s.lab.westlake.edu.cn/">AI for Scientific Simulation and Discovery Lab</a>.
+        </p>
+        <p>
+          My research develops <strong>generative models</strong> &mdash; flow matching, optimal transport,
+          and stochastic bridges &mdash; for <strong>single-cell biology</strong>: predicting how cell
+          populations respond to perturbations and reconstructing how they develop over time, as steps
+          toward AI virtual cells. I have also contributed to work on scientific machine learning,
+          stochastic optimal control, and LLM reasoning.
+        </p>
+        <ul class="contact">
+          <li>
+            <a href="mailto:yuchenglei@westlake.edu.cn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+              yuchenglei@westlake.edu.cn
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=lzYSFx4AAAAJ">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 4l10 5.5-10 5.5L2 9.5Z"/><path d="M6 11.7V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.3"/><path d="M22 9.5V15"/></svg>
+              Google Scholar
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/oYCLo">
+              <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== News ============================== -->
+    <section class="block" id="news" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <ul class="timeline">
+        <li><time datetime="2026-09">2026.09</time><p><a href="#pace">PACE</a> is accepted to <b>NeurIPS 2026</b>.</p></li>
+        <li><time datetime="2026-05">2026.05</time><p><a href="#buildarena">BuildArena</a> is accepted to <b>ICML 2026</b>.</p></li>
+        <li><time datetime="2026-01">2026.01</time><p><a href="#scdfm">scDFM</a> and <a href="#realpdebench">RealPDEBench</a> are accepted to <b>ICLR 2026</b>; RealPDEBench is selected for an <b>Oral</b> (top 1.2%).</p></li>
+        <li><time datetime="2025-05">2025.05</time><p><a href="#flow-guidance">On the Guidance of Flow Matching</a> is accepted to <b>ICML 2025</b> as a <b>Spotlight</b>.</p></li>
+        <li><time datetime="2024-09">2024.09</time><p>Started my Ph.D. at Westlake University &amp; Zhejiang University.</p></li>
+      </ul>
+    </section>
+
+    <!-- ============================== Publications ==============================
+         To add a paper: copy one <li class="pub"> block. Add class "is-first" for first / co-first author papers.
+         Thumbnails live in assets/img/pubs/ (~720px wide). -->
+    <section class="block" id="publications" aria-labelledby="pub-title">
+      <h2 id="pub-title">Publications</h2>
+      <p class="legend">
+        <span>* Equal contribution</span>
+        <span><i class="swatch" aria-hidden="true"></i>First or co-first author</span>
+        <span>Full list on <a href="https://scholar.google.com/citations?user=lzYSFx4AAAAJ">Google Scholar</a></span>
+      </p>
+
+      <h3 class="group">Conference Papers</h3>
+      <ol class="pubs">
+
+        <li class="pub is-first" id="pace">
+          <a class="pub-thumb" href="https://arxiv.org/abs/2605.18587" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/pubs/pace.webp" width="720" height="349" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="pub-body">
+            <p class="venue">NeurIPS 2026</p>
+            <h4 class="pub-title"><a href="https://arxiv.org/abs/2605.18587">PACE: Geometry-Aware Bridge Transport for Single-Cell Trajectory Inference</a></h4>
+            <p class="authors"><b class="me">Chenglei Yu</b>*, Chuanrui Wang*, Bangyan Liao, Tailin Wu</p>
+            <p class="tldr">Recovers continuous developmental trajectories from unpaired, destructive single-cell snapshots by transporting cells along a learned metric that follows the data manifold.</p>
+            <p class="pub-links">
+              <a class="chip" href="https://arxiv.org/abs/2605.18587">arXiv</a>
+              <a class="chip" href="https://github.com/AI4Science-WestlakeU/PACE">Code</a>
+              <button class="chip" type="button" data-bib="bib-pace" aria-expanded="false" aria-controls="bib-pace" hidden>BibTeX</button>
+            </p>
+            <div class="bib" id="bib-pace" hidden>
+              <button class="copy" type="button">Copy</button>
+<pre>@inproceedings{yu2026pace,
+  title     = {{PACE}: Geometry-Aware Bridge Transport for Single-Cell Trajectory Inference},
+  author    = {Yu, Chenglei and Wang, Chuanrui and Liao, Bangyan and Wu, Tailin},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026}
+}</pre>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub" id="buildarena">
+          <a class="pub-thumb" href="https://build-arena.github.io/" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/pubs/buildarena.webp" width="720" height="393" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="pub-body">
+            <p class="venue">ICML 2026</p>
+            <h4 class="pub-title"><a href="https://openreview.net/forum?id=QAQKmIp3SZ">BuildArena: A Physics-Aligned Interactive Benchmark of LLMs for Engineering Construction</a></h4>
+            <p class="authors">Tian Xia, Tianrun Gao, Wenhao Deng, Long Wei, Xiaowei Qian, <b class="me">Chenglei Yu</b>, Tailin Wu</p>
+            <p class="tldr">An interactive benchmark in which LLM agents turn a one-sentence goal into rockets, bridges, and vehicles, then test them in a physics simulator.</p>
+            <p class="pub-links">
+              <a class="chip" href="https://openreview.net/forum?id=QAQKmIp3SZ">Paper</a>
+              <a class="chip" href="https://arxiv.org/abs/2510.16559">arXiv</a>
+              <a class="chip" href="https://build-arena.github.io/">Project</a>
+              <a class="chip" href="https://github.com/AI4Science-WestlakeU/BuildArena">Code</a>
+              <button class="chip" type="button" data-bib="bib-buildarena" aria-expanded="false" aria-controls="bib-buildarena" hidden>BibTeX</button>
+            </p>
+            <div class="bib" id="bib-buildarena" hidden>
+              <button class="copy" type="button">Copy</button>
+<pre>@inproceedings{xia2026buildarena,
+  title     = {{BuildArena}: A Physics-Aligned Interactive Benchmark of {LLMs} for Engineering Construction},
+  author    = {Xia, Tian and Gao, Tianrun and Deng, Wenhao and Wei, Long and Qian, Xiaowei and Yu, Chenglei and Wu, Tailin},
+  booktitle = {Forty-third International Conference on Machine Learning},
+  year      = {2026}
+}</pre>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub is-first" id="scdfm">
+          <a class="pub-thumb" href="https://openreview.net/forum?id=QSGanMEcUV" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/pubs/scdfm.webp" width="720" height="413" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="pub-body">
+            <p class="venue">ICLR 2026</p>
+            <h4 class="pub-title"><a href="https://openreview.net/forum?id=QSGanMEcUV">scDFM: Distributional Flow Matching Model for Robust Single-Cell Perturbation Prediction</a></h4>
+            <p class="authors"><b class="me">Chenglei Yu</b>*, Chuanrui Wang*, Bangyan Liao, Tailin Wu</p>
+            <p class="tldr">Predicts how a perturbation shifts the whole distribution of cell states with conditional flow matching, without assuming cell-level correspondences.</p>
+            <p class="pub-links">
+              <a class="chip" href="https://openreview.net/forum?id=QSGanMEcUV">Paper</a>
+              <a class="chip" href="https://arxiv.org/abs/2602.07103">arXiv</a>
+              <a class="chip" href="https://github.com/AI4Science-WestlakeU/scDFM">Code</a>
+              <button class="chip" type="button" data-bib="bib-scdfm" aria-expanded="false" aria-controls="bib-scdfm" hidden>BibTeX</button>
+            </p>
+            <div class="bib" id="bib-scdfm" hidden>
+              <button class="copy" type="button">Copy</button>
+<pre>@inproceedings{yu2026scdfm,
+  title     = {{scDFM}: Distributional Flow Matching Model for Robust Single-Cell Perturbation Prediction},
+  author    = {Yu, Chenglei and Wang, Chuanrui and Liao, Bangyan and Wu, Tailin},
+  booktitle = {The Fourteenth International Conference on Learning Representations},
+  year      = {2026}
+}</pre>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub" id="realpdebench">
+          <a class="pub-thumb" href="https://realpdebench.github.io/" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/pubs/realpdebench.webp" width="720" height="255" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="pub-body">
+            <p class="venue">ICLR 2026 <span class="award">Oral</span></p>
+            <h4 class="pub-title"><a href="https://openreview.net/forum?id=y3oHMcoItR">RealPDEBench: A Benchmark for Complex Physical Systems with Real-World Data</a></h4>
+            <p class="authors">Peiyan Hu*, Haodong Feng*, Hongyuan Liu*, Tongtong Yan, Wenhao Deng, Tianrun Gao, Rong Zheng, Haoren Zheng, <b class="me">Chenglei Yu</b>, Chuanrui Wang, Kaiwen Li, Zhi-Ming Ma, Dezhi Zhou, Xingcai Lu, Dixia Fan, Tailin Wu</p>
+            <p class="tldr">Pairs real-world measurements with simulations of complex physical systems to study how scientific ML models cross the sim-to-real gap.</p>
+            <p class="pub-links">
+              <a class="chip" href="https://openreview.net/forum?id=y3oHMcoItR">Paper</a>
+              <a class="chip" href="https://arxiv.org/abs/2601.01829">arXiv</a>
+              <a class="chip" href="https://realpdebench.github.io/">Project</a>
+              <a class="chip" href="https://github.com/AI4Science-WestlakeU/RealPDEBench">Code</a>
+              <button class="chip" type="button" data-bib="bib-realpdebench" aria-expanded="false" aria-controls="bib-realpdebench" hidden>BibTeX</button>
+            </p>
+            <div class="bib" id="bib-realpdebench" hidden>
+              <button class="copy" type="button">Copy</button>
+<pre>@inproceedings{hu2026realpdebench,
+  title     = {{RealPDEBench}: A Benchmark for Complex Physical Systems with Real-World Data},
+  author    = {Hu, Peiyan and Feng, Haodong and Liu, Hongyuan and Yan, Tongtong and Deng, Wenhao and Gao, Tianrun and Zheng, Rong and Zheng, Haoren and Yu, Chenglei and Wang, Chuanrui and Li, Kaiwen and Ma, Zhi-Ming and Zhou, Dezhi and Lu, Xingcai and Fan, Dixia and Wu, Tailin},
+  booktitle = {The Fourteenth International Conference on Learning Representations},
+  year      = {2026}
+}</pre>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub" id="flow-guidance">
+          <a class="pub-thumb" href="https://openreview.net/forum?id=pKaNgFzJBy" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/pubs/flow-guidance.webp" width="720" height="331" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="pub-body">
+            <p class="venue">ICML 2025 <span class="award">Spotlight</span></p>
+            <h4 class="pub-title"><a href="https://openreview.net/forum?id=pKaNgFzJBy">On the Guidance of Flow Matching</a></h4>
+            <p class="authors">Ruiqi Feng, <b class="me">Chenglei Yu</b>*, Wenhao Deng*, Peiyan Hu, Tailin Wu</p>
+            <p class="tldr">A unified framework for energy guidance in general flow matching; it yields new guidance methods and recovers classical ones as special cases.</p>
+            <p class="pub-links">
+              <a class="chip" href="https://openreview.net/forum?id=pKaNgFzJBy">Paper</a>
+              <a class="chip" href="https://arxiv.org/abs/2502.02150">arXiv</a>
+              <a class="chip" href="https://github.com/AI4Science-WestlakeU/flow_guidance">Code</a>
+              <button class="chip" type="button" data-bib="bib-flow-guidance" aria-expanded="false" aria-controls="bib-flow-guidance" hidden>BibTeX</button>
+            </p>
+            <div class="bib" id="bib-flow-guidance" hidden>
+              <button class="copy" type="button">Copy</button>
+<pre>@inproceedings{feng2025guidance,
+  title     = {On the Guidance of Flow Matching},
+  author    = {Feng, Ruiqi and Yu, Chenglei and Deng, Wenhao and Hu, Peiyan and Wu, Tailin},
+  booktitle = {Forty-second International Conference on Machine Learning},
+  year      = {2025}
+}</pre>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="group">Preprints</h3>
+      <ol class="pubs">
+
+        <li class="pub" id="pivm">
+          <a class="pub-thumb" href="https://arxiv.org/abs/2608.10777" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/pubs/pivm.webp" width="720" height="717" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="pub-body">
+            <p class="venue is-preprint">arXiv 2026</p>
+            <h4 class="pub-title"><a href="https://arxiv.org/abs/2608.10777">Path Integral Value Matching for Linear Quadratic Stochastic Optimal Control</a></h4>
+            <p class="authors">Bangyan Liao, <b class="me">Chenglei Yu</b>, Yuchen Yang, Chuanrui Wang, Zhisheng Song, Peidong Liu, Tailin Wu</p>
+            <p class="tldr">A value-based solver for stochastic optimal control: a recursive path-integral value function learned by temporal-difference matching, without full-trajectory simulation.</p>
+            <p class="pub-links">
+              <a class="chip" href="https://arxiv.org/abs/2608.10777">arXiv</a>
+              <a class="chip" href="https://github.com/bangyan101/PIVM">Code</a>
+              <button class="chip" type="button" data-bib="bib-pivm" aria-expanded="false" aria-controls="bib-pivm" hidden>BibTeX</button>
+            </p>
+            <div class="bib" id="bib-pivm" hidden>
+              <button class="copy" type="button">Copy</button>
+<pre>@article{liao2026pivm,
+  title   = {Path Integral Value Matching for Linear Quadratic Stochastic Optimal Control},
+  author  = {Liao, Bangyan and Yu, Chenglei and Yang, Yuchen and Wang, Chuanrui and Song, Zhisheng and Liu, Peidong and Wu, Tailin},
+  journal = {arXiv preprint arXiv:2608.10777},
+  year    = {2026}
+}</pre>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub is-first" id="rapo">
+          <a class="pub-thumb" href="https://arxiv.org/abs/2510.03865" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/pubs/rapo.webp" width="720" height="378" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="pub-body">
+            <p class="venue is-preprint">arXiv 2025</p>
+            <h4 class="pub-title"><a href="https://arxiv.org/abs/2510.03865">Unlocking Reasoning Capabilities in LLMs via Reinforcement Learning Exploration</a></h4>
+            <p class="authors">Wenhao Deng*, Long Wei*, <b class="me">Chenglei Yu</b>*, Tailin Wu</p>
+            <p class="tldr">RAPO swaps the mode-seeking reverse-KL penalty in RL with verifiable rewards for a forward-KL, reward-aware objective, letting LLMs explore beyond the base model.</p>
+            <p class="pub-links">
+              <a class="chip" href="https://arxiv.org/abs/2510.03865">arXiv</a>
+              <button class="chip" type="button" data-bib="bib-rapo" aria-expanded="false" aria-controls="bib-rapo" hidden>BibTeX</button>
+            </p>
+            <div class="bib" id="bib-rapo" hidden>
+              <button class="copy" type="button">Copy</button>
+<pre>@article{deng2025rapo,
+  title   = {Unlocking Reasoning Capabilities in {LLMs} via Reinforcement Learning Exploration},
+  author  = {Deng, Wenhao and Wei, Long and Yu, Chenglei and Wu, Tailin},
+  journal = {arXiv preprint arXiv:2510.03865},
+  year    = {2025}
+}</pre>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ============================== Experience ============================== -->
+    <section class="block" id="experience" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experience</h2>
+      <ul class="timeline exp">
+        <li>
+          <time datetime="2024-09">2024 &ndash; Present</time>
+          <p>
+            <b>Westlake University</b> &middot; Ph.D. Student<br>
+            <span class="muted">Department of Artificial Intelligence, School of Engineering &middot;
+            <a href="https://ai4s.lab.westlake.edu.cn/">AI for Scientific Simulation and Discovery Lab</a>,
+            advised by <a href="https://tailin.org/">Prof. Tailin Wu</a></span>
+          </p>
+        </li>
+        <li>
+          <time datetime="2024-09">2024 &ndash; Present</time>
+          <p>
+            <b>Zhejiang University</b> &middot; Ph.D. Student<br>
+            <span class="muted">Joint Ph.D. program with Westlake University</span>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Chenglei Yu &middot; Last updated September 2026</p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
